@@ -203,6 +203,10 @@
   padding-left: 53px;
 }
 
+.quote-avatar {
+  width: 160px;
+}
+
 .quotes .row [class*="col"] {
   padding-left: 0;
   padding-right: 0;
@@ -757,6 +761,18 @@
 
 /* SEARCH SECTION  */
 
+.translucent {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+select::after {
+  background-color: var(--main-color);
+}
+
+.search-bg {
+  background-color: var(--main-color);
+}
+
 .search {
   background-color: var(--main-color);
   height: auto;
@@ -899,4 +915,47 @@
   .results .card {
     width: 90vw;
   }
+}
+
+/* slick styling */
+
+#quotes-carousel .slick-arrow.slick-prev:before {
+  content: url('./images/arrow_white_left.png') !important;
+}
+
+#quotes-carousel .slick-arrow.slick-next:before {
+  content: url('./images/arrow_white_right.png') !important;
+}
+
+#popular-carousel .slick-arrow.slick-prev:before {
+  content: url('./images/arrow_black_left.png') !important;
+  margin-right: 20px;
+  height: 25px;
+}
+
+#popular-carousel .slick-arrow.slick-next:before {
+  content: url('./images/arrow_black_right.png') !important;
+  margin-right: 20px;
+  height: 25px;
+}
+
+.card-slide {
+  width: 247px;
+}
+
+/* loader styles */
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #C271FF;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
